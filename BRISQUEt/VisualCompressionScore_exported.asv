@@ -78,14 +78,15 @@ classdef VisualCompressionScore_exported < matlab.apps.AppBase
             
             % For new BRISQUEt function:
             
-            vcs = brisquet(im);
+              vcs = brisquet(im);
            
             % For pure BRISQUEt score:
-            app.VisualCompressionScoreEditField.Value = vcs;
+            % app.VisualCompressionScoreEditField.Value = vcs;
             
             % To restrict the range of BRISQUEt to 0-100:
-            % vcs_max_min = min(max(vcs,0),100)
-            % app.VisualCompressionScoreEditField.Value = vcs_max_min;
+        
+              vcs_max_min = interp1([-50,100],[0,100],vcs);
+              app.VisualCompressionScoreEditField.Value = vcs_max_min;
             
             
         end
@@ -103,7 +104,7 @@ classdef VisualCompressionScore_exported < matlab.apps.AppBase
             axis(app.ImageAxes, 'image');
             
             % Update the image and histograms
-            updateimage(app, 'https://res.cloudinary.com/memeticinfluence/image/upload/v1601105568/visual-compression-score/online-tool/hank-hill-examples/hankhill3.jpg');
+            updateimage(app, 'hankhill/hankhill3.jpg');
         end
         
         % Value changed function: DropDown
@@ -138,7 +139,7 @@ classdef VisualCompressionScore_exported < matlab.apps.AppBase
             app.UIFigure = uifigure('Visible', 'off');
             app.UIFigure.AutoResizeChildren = 'off';
             app.UIFigure.Position = [100 100 702 528];
-            app.UIFigure.Name = 'Visual Compression Score';
+            app.UIFigure.Name = 'Visual Compression Score (BRIS';
             app.UIFigure.Resize = 'off';
             
             % Create LoadButton
