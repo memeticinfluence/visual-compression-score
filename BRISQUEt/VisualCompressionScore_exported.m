@@ -170,7 +170,7 @@ classdef VisualCompressionScore_exported < matlab.apps.AppBase
             app.VisualCompressionScoreEditFieldLabel.FontSize = 20;
             app.VisualCompressionScoreEditFieldLabel.FontWeight = 'bold';
             app.VisualCompressionScoreEditFieldLabel.Position = [179 136 350 75];
-            app.VisualCompressionScoreEditFieldLabel.Text = {'Visual Compression Score (BRISQUET)'; ''};
+            app.VisualCompressionScoreEditFieldLabel.Text = {'Visual Compression Score (BRISQUEt)'; ''};
             
             % Create VisualCompressionScoreEditField
             app.VisualCompressionScoreEditField = uieditfield(app.UIFigure, 'numeric');
