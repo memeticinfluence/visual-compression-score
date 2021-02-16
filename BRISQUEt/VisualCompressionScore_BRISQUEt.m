@@ -1,4 +1,4 @@
-classdef VisualCompressionScore_exported < matlab.apps.AppBase
+classdef VisualCompressionScore_BRISQUEt < matlab.apps.AppBase
     
     % Properties that correspond to app components
     properties (Access = public)
@@ -169,7 +169,7 @@ classdef VisualCompressionScore_exported < matlab.apps.AppBase
             app.VisualCompressionScoreEditFieldLabel.FontName = 'Dubai';
             app.VisualCompressionScoreEditFieldLabel.FontSize = 20;
             app.VisualCompressionScoreEditFieldLabel.FontWeight = 'bold';
-            app.VisualCompressionScoreEditFieldLabel.Position = [179 136 350 75];
+            app.VisualCompressionScoreEditFieldLabel.Position = [179 136 350 51];
             app.VisualCompressionScoreEditFieldLabel.Text = {'Visual Compression Score (BRISQUEt)'; ''};
             
             % Create VisualCompressionScoreEditField
@@ -227,7 +227,7 @@ classdef VisualCompressionScore_exported < matlab.apps.AppBase
     methods (Access = public)
         
         % Construct app
-        function app = VisualCompressionScore_exported
+        function app = VisualCompressionScore_BRISQUEt
             
             % Create UIFigure and components
             createComponents(app)
